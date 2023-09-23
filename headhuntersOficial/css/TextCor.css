@@ -1,0 +1,89 @@
+/* FORM */
+
+form { padding: 2.5em; }
+
+.group { position: relative; margin-bottom: 2.4em; }
+
+label {
+    color: #000000;
+    font-size: 15px;
+    font-weight: normal;
+    font-family: sans-serif;
+    position: absolute;
+    pointer-events: none;
+    top: 10px;
+    transition: 0.2s ease all;
+}
+
+input {
+    color: #000000;
+    font-size: 15px;
+    padding: 10px 0px 10px 0px;
+    display: block;
+    outline: none;
+    border: none;
+    width: 300px;
+    border-bottom: 1px solid #000000; 	
+}
+
+/* BARS - ANIMAÃ‡ÃƒO */
+
+.bar { position: relative; display: block; width: 300px; }
+
+.bar:before, .bar:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: -1px;
+    position: absolute;
+    background: #03a8a4;
+    transition: 0.2s ease all;
+}
+
+.bar:before { left: 50%; }
+.bar:after { right: 50%; }
+
+/* INPUTS - VALIDAÃ‡ÃƒO */
+
+input:valid { border-bottom: 1px solid #4fc24f; }
+
+input:valid ~ .bar:before,
+input:valid ~ .bar:after {
+    background: #4fc24f !important;
+}
+
+input:focus ~ label,
+input.used ~ label {
+    top: -20px;
+    font-size: 13px;
+    color: #03a8a4;
+}
+
+input:valid ~ label,
+input:valid.used ~ label {
+    color: #4fc24f;
+}
+
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+    width: 50%;
+}
+
+
+
+select{
+    
+    color: #000000;
+    font-size: 15px;
+    padding: 10px 0px 10px 0px;
+    display: block;
+    outline: none;
+    border: none;
+    width: 300px;
+    border-bottom: 1px solid #000000;
+
+
+
+
+}
+
